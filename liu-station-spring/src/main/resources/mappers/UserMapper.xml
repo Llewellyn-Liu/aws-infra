@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lrl.liustationspring.dao.mapper.UserMapper">
+
+    <insert id="insertRegisterUser">
+        insert into User values (null, #{firstname}, #{lastname},#{username},#{password},#{accountCreated},
+                                         #{accountLastModified},#{token})
+    </insert>
+
+    <select id="selectUserById" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where id = #{id}
+    </select>
+
+    <select id="selectUsers" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where username = 'lrllrl'
+    </select>
+    
+    <select id="selectUsersByName" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where username = #{username}
+    </select>
+
+<!--Deprecated - use verifyToken instead-->
+    <select id="verify" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where username = #{username} and password =  #{password}
+    </select>
+
+    <select id="getUserByToken" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where token =  #{token}
+    </select>
+    <select id="getUserByUsername" resultType="com.lrl.liustationspring.dao.pojo.User">
+        select * from User where username =  #{username}
+    </select>
+
+
+
+    <update id="updateUser">
+        update User set firstname = #{firstname}, lastname = #{lastname}, username = #{username}, password = #{password},
+                    accountLastModified = #{accountLastModified} where id = #{id}
+    </update>
+</mapper>

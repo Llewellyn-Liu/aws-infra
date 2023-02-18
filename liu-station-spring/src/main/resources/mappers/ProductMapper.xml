@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lrl.liustationspring.dao.mapper.ProductMapper">
+    <insert id="insertNewProduct">
+        insert into Product values(null, #{name},#{description},#{sku},#{manufacturer},#{dateAdded},#{dateLastModified},#{ownerUserId}, #{quantity});
+    </insert>
+
+    <select id="getProductById" resultType="com.lrl.liustationspring.dao.pojo.Product">
+        select * from Product where id = #{id};
+    </select>
+
+    <select id="getProductByTimeCreated" resultType="com.lrl.liustationspring.dao.pojo.Product">
+        select * from Product where dateAdded = #{dateAdded};
+    </select>
+
+    <update id="updateProduct">
+        update Product set name = #{name}, description = #{description}, sku = #{sku},  manufacturer = #{manufacturer}, quantity = #{quantity},
+                           dateLastModified = #{dateLastModified} where id = #{id}
+    </update>
+
+    <delete id="deleteProductData">
+        delete from Product where id = #{id};
+    </delete>
+
+</mapper>

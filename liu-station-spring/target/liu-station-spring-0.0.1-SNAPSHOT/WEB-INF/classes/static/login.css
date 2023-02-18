@@ -1,0 +1,86 @@
+:root{
+    font-size: 15px;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color:	#87CEFA;
+    background-image:
+      radial-gradient(closest-side, rgba(235,105,78,1), rgba(235,105,78,0)),
+        radial-gradient(closest-side, rgba(39,148,246,1), rgba(39,148,246,0)),
+        radial-gradient(closest-side, rgba(2,81,255,1), rgba(2,81,255,0)),
+        radial-gradient(closest-side, rgba(255,140,0,1), rgba(255,140,0,0)),
+        radial-gradient(closest-side, rgba(246,96,113,1), rgba(246,96,113,0));
+    background-size:
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: 25s movement linear infinite;
+  }
+
+  body::after{
+    content: '';
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  #loginWindow {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  @keyframes movement {
+    0%, 100%{
+        background-size:
+        130vmax 130vmax,
+        80vmax 80vmax,
+        90vmax 90vmax,
+        110vmax 110vmax,
+        90vmax 90vmax;
+      background-position:
+        -80vmax -80vmax,
+        60vmax -30vmax,
+        10vmax 10vmax,
+        -30vmax -10vmax,
+        50vmax 50vmax;
+      background-repeat: no-repeat;
+    }
+
+    25%{
+        background-size:
+        150vmax 150vmax,
+        70vmax 70vmax,
+        120vmax 120vmax,
+        100vmax 100vmax,
+        140vmax 140vmax;
+      background-position:
+        -70vmax -50vmax,
+        50vmax -10vmax,
+        30vmax 40vmax,
+        -30vmax 10vmax,
+        60vmax 70vmax;
+      background-repeat: no-repeat;
+    }
+  }
