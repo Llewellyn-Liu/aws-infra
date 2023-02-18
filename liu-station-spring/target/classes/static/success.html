@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Test</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    
+    <div style="font-size: 5rem;" id="loginWindow">
+        Success.
+        <button id="request-test">test</button>
+    </div>
+
+    <script>
+        $("#login-test").click(
+            function () {
+                $.get(
+                    "/v1/user",
+                    {
+                        id: "4"
+                    },
+                    function (res) {
+                        window.alert(JSON.stringify(res));
+                    },
+                    'json'
+
+                )
+            }
+        );
+
+        $("#request-test").click(
+            function () {
+                const username = 'liurunlin0213@live.com';
+                const password = '990213';
+                const credentials = btoa(username + ':' + password);
+                console.log(credentials);
+                // dXNlcjpwYXNz
+
+                fetch(url, {
+                    headers: {
+                        Authorization: `Basic ${credentials}`
+                    }
+                });
+            }
+        )
+
+
+        $("#login-bt").click(
+            function () {
+                console.log(Date.parse(new Date()));
+                $.post("/Login",
+                    {
+                        "username": $("#r-usnm").val(),
+                        "password": $("#r-pswd").val()
+                    },
+                    function (data, status) {
+                        console.log(JSON.stringify(data));
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+
+</html>

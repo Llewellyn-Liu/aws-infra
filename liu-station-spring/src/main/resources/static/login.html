@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - Test</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="loginWindow">
+        <form action="/UserRegister" method="post">
+            Email: <input type="text" name="username" id="r-usnm" />
+            First Name: <input type="text" name="firstname" id="r-frnm" />
+            Last Name: <input type="text" name="lastname" id="r-lsnm" />
+            Password: <input type="password" name="password" id="r-pswd" />
+        </form>
+        <button id="r-bt">Register</button>
+        <button id="login-bt">Log in</button>
+        <button id="login-test">Test</button>
+        <button id="request-test">Request</button>
+        <div id="login-console">Fill the EMAIL field and PASSWORD field to login</div>
+
+    </div>
+
+    <script>
+        $("#login-test").click(
+            function () {
+                $.ajax({
+                    url: "/data/user/12",
+                    type: "put",
+                    data: {
+                        username: "f@bb.com",
+                        password: "000000",
+                        firstname: "lrl",
+                        lastname: "lin"
+                    },
+                    dataType: "json",
+                    success: function(res){
+                        console.log(res)
+                    }
+                })
+                // $.put(
+                //     "/data/user/12",
+                //     {
+                //         username: "e@bb.com",
+                //         password: "000000",
+                //         firstname: "lrl",
+                //         lastname: "lin"
+                //     },
+                //     function (res) {
+                //         window.alert(JSON.stringify(res));
+                //     },
+                //     'json'
+
+                // )
+            }
+        );
+
+        $("#request-test").click(
+            function () {
+                const username = 'user';
+                const password = 'pass';
+                const credentials = btoa(username + ':' + password);
+                console.log(credentials);
+                // dXNlcjpwYXNz
+
+                fetch(url, {
+                    headers: {
+                        Authorization: `Basic ${credentials}`
+                    }
+                });
+            }
+        )
+
+
+        $("#login-bt").click(
+            function () {
+                console.log(Date.parse(new Date()));
+                $.post("/Login",
+                    {
+                        "username": $("#r-usnm").val(),
+                        "password": $("#r-pswd").val()
+                    },
+                    function (data, status) {
+                        console.log(JSON.stringify(data));
+                    }
+                )
+            }
+        )
+
+        $("#r-bt").click(
+            function () {
+                console.log(Date.parse(new Date()));
+                $.post("/UserRegister",
+                    {
+                        "username": $("#r-usnm").val(),
+                        "firstname": $("#r-frnm").val(),
+                        "lastname": $("#r-lsnm").val(),
+                        "password": $("#r-pswd").val()
+                    },
+                    function (data, status) {
+                        console.log(JSON.stringify(data));
+                    }
+                )
+            }
+        )
+    </script>
+</body>
+
+</html>
