@@ -52,8 +52,8 @@ source "amazon-ebs" "aws-lrl-6225-t" {
   }
 
 
-  access_key = "AKIATKDBMDVFCSAT7CTP"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 
   instance_type     = "t2.micro"
   source_ami        = "${var.source_ami}"
