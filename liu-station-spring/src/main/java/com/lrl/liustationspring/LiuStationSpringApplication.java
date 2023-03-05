@@ -1,6 +1,7 @@
 package com.lrl.liustationspring;
 
 import com.lrl.liustationspring.service.Bootstrapper;
+import com.lrl.liustationspring.service.S3BucketService;
 import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -13,6 +14,9 @@ public class LiuStationSpringApplication {
         SpringApplication.run(LiuStationSpringApplication.class, args);
 
         Bootstrapper.bootstrap();
+
+        S3BucketService.readContext();
+        S3BucketService.transferFile();
     }
 
 }

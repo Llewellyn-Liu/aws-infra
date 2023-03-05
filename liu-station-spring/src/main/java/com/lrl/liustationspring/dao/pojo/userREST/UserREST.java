@@ -1,50 +1,112 @@
 package com.lrl.liustationspring.dao.pojo.userREST;
 
-import com.lrl.liustationspring.dao.pojo.User;
-
-import java.sql.Timestamp;
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class UserREST {
 
-    private static String type = "Object";
+    private IdREST id;
 
-    private HashMap<String, FieldREST> properties;
+    private UsernameREST username;
 
-    public UserREST(HashMap<String, FieldREST> properties) {
-        this.properties = properties;
+    private FirstNameREST firstname;
+
+    private LastNameREST lastname;
+
+    private PasswordREST password;
+
+    private AccountCreatedREST accountCreated;
+
+    private AccountLastModifiedREST accountLastModified;
+
+    private TokenREST token;
+
+    public UserREST() {
     }
 
-    public UserREST(Integer id, String firstname, String lastname, String username, String password, Timestamp accountCreated, Timestamp accountLastModified, String token) {
-
-
-        properties = new HashMap<String, FieldREST>();
-        properties.put("id", new IdREST(id, true, false));
-        properties.put("firstname", new FirstNameREST(firstname, true, false));
-        properties.put("lastname", new LastNameREST(lastname, true, false));
-        properties.put("username", new UsernameREST(username, true, false));
-        properties.put("password", new PasswordREST(password, true, false));
-        properties.put("time0", new AccountCreatedREST(accountCreated, true, false));
-        properties.put("time1", new AccountLastModifiedREST(accountLastModified, true, false));
-        properties.put("token", new TokenREST(token, true, false));
-
-
+    public UserREST(IdREST id, UsernameREST username, FirstNameREST firstName, LastNameREST lastName, PasswordREST password, AccountCreatedREST accountCreated, AccountLastModifiedREST accountLastModified, TokenREST token) {
+        this.id = id;
+        this.username = username;
+        this.firstname = firstName;
+        this.lastname = lastName;
+        this.password = password;
+        this.accountCreated = accountCreated;
+        this.accountLastModified = accountLastModified;
+        this.token = token;
     }
 
-    public static String getType() {
-        return type;
+    public IdREST getId() {
+        return id;
     }
 
-    public static void setType(String type) {
-        UserREST.type = type;
+    public void setId(IdREST id) {
+        this.id = id;
     }
 
-    public HashMap<String, FieldREST> getProperties() {
-        return properties;
+    public UsernameREST getUsername() {
+        return username;
     }
 
-    public void setProperties(HashMap<String, FieldREST> properties) {
-        this.properties = properties;
+    public void setUsername(UsernameREST username) {
+        this.username = username;
+    }
+
+    public FirstNameREST getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(FirstNameREST firstname) {
+        this.firstname = firstname;
+    }
+
+    public LastNameREST getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(LastNameREST lastName) {
+        this.lastname = lastName;
+    }
+
+    public PasswordREST getPassword() {
+        return password;
+    }
+
+    public void setPassword(PasswordREST password) {
+        this.password = password;
+    }
+
+    public AccountCreatedREST getAccountCreated() {
+        return accountCreated;
+    }
+
+    public void setAccountCreated(AccountCreatedREST accountCreated) {
+        this.accountCreated = accountCreated;
+    }
+
+    public AccountLastModifiedREST getAccountLastModified() {
+        return accountLastModified;
+    }
+
+    public void setAccountLastModified(AccountLastModifiedREST accountLastModified) {
+        this.accountLastModified = accountLastModified;
+    }
+
+    public TokenREST getToken() {
+        return token;
+    }
+
+    public void setToken(TokenREST token) {
+        this.token = token;
+    }
+
+    @Override
+    public String toString() {
+        return "UserREST{" +
+                "id=" + id +
+                ", username=" + username +
+                ", firstName=" + firstname +
+                ", lastName=" + lastname +
+                ", password=" + password +
+                ", accountCreated=" + accountCreated +
+                ", accountLastModified=" + accountLastModified +
+                ", token=" + token +
+                '}';
     }
 }

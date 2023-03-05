@@ -17,6 +17,7 @@
     <mappers>
         <mapper resource="mappers/UserMapper.xml"/>
         <mapper resource="mappers/ProductMapper.xml"/>
+        <mapper resource="mappers/ImageMapper.xml"/>
         <mapper resource="mappers/BootstrapMapper.xml"/>
     </mappers>
 </configuration>

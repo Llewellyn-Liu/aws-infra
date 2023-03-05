@@ -12,6 +12,9 @@ public class FirstNameREST extends FieldREST{
 
     private boolean writeOnly;
 
+    public FirstNameREST() {
+    }
+
     public FirstNameREST(String firstname, boolean readOnly, boolean writeOnly){
         value = firstname;
         this.readOnly = readOnly;

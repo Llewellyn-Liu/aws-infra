@@ -1,40 +1,53 @@
 package com.lrl.liustationspring.dao.pojo.userREST;
 
-public class IdREST extends FieldREST{
-    private static String type = "int";
+public class IdREST extends FieldREST {
 
     private int value;
 
-    private boolean readOnly;
+    private String readonly;
 
-    private boolean writeOnly;
+    private String writeonly;
 
-    public IdREST(int id, boolean readOnly, boolean writeOnly ) {
-        this.value = id;
-        this.readOnly = readOnly;
-        this.writeOnly = writeOnly;
+    public IdREST(){
+
     }
 
-    public static String getType() {
-        return type;
+    public IdREST(int value, String readonly, String writeonly) {
+        this.value = value;
+        this.readonly = readonly;
+        this.writeonly = writeonly;
     }
 
     public int getValue() {
         return value;
     }
 
-    public static void setType(String type) {
-        IdREST.type = type;
-    }
-
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public String getReadonly() {
+        return readonly;
+    }
+
+    public void setReadonly(String readonly) {
+        this.readonly = readonly;
+    }
+
+    public String getWriteonly() {
+        return writeonly;
     }
 
     @Override
     public String toString() {
         return "IdREST{" +
                 "value=" + value +
+                ", readonly='" + readonly + '\'' +
+                ", writeonly='" + writeonly + '\'' +
                 '}';
+    }
+
+    public void setWriteonly(String writeonly) {
+        this.writeonly = writeonly;
     }
 }
