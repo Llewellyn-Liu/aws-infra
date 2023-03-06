@@ -21,8 +21,10 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
+import java.util.List;
 
 @RestController
 public class ProductImageController {
@@ -41,17 +43,12 @@ public class ProductImageController {
     }
 
     @RequestMapping(value = "/data/product/{pathProductId}/image", method = RequestMethod.POST)
-    public ImageMeta createNewImageForProduct(HttpServletRequest request, HttpServletResponse response, @PathVariable int pathProductId, @RequestBody Image img) {
+    public ArrayList<ImageMeta> createNewImageForProduct(HttpServletRequest request, HttpServletResponse response, @PathVariable int pathProductId, @RequestBody List<Image> imgs) {
 
         if (!authentication(request)) {
             response.setStatus(401);
             return null;
         }
-
-        ObjectMapper mapper = new ObjectMapper();
-
-
-        logger.info("Read from inputStream: " + img.toString());
 
         if (!validateProductId(pathProductId, request)) {
             response.setStatus(400);
@@ -59,22 +56,31 @@ public class ProductImageController {
             return null;
         }
 
-        String imgBase64 = saveImage(img.getFile(), pathProductId, img.getFilename(), img.getType());
-        logger.info("saved path: " + imgBase64);
-        img.setS3BucketPath(imgBase64);
-        img.setProductId(pathProductId);
-        img.setDateCreated(new Date(System.currentTimeMillis()));
-        boolean addSuccess = ImageDataService.getInstance().addImage(img);
+        ObjectMapper mapper = new ObjectMapper();
+        ArrayList<ImageMeta> rel = new ArrayList<>();
 
-        if (!addSuccess) {
-            logger.info("Image cannot be added: " + img.toString());
-            return null;
+        for(Image img: imgs){
+            logger.info("Read from inputStream: " + img.toString());
+
+
+            String imgBase64 = saveImage(img.getFile(), pathProductId, img.getFilename(), img.getType());
+            logger.info("saved path: " + imgBase64);
+            img.setS3BucketPath(imgBase64);
+            img.setProductId(pathProductId);
+            img.setDateCreated(new Date(System.currentTimeMillis()));
+            boolean addSuccess = ImageDataService.getInstance().addImage(img);
+
+            if (!addSuccess) {
+                logger.info("Image cannot be added: " + img.toString());
+                return null;
+            }
+
+            ImageMeta meta = ImageDataService.getInstance().getMetaUsingPath(imgBase64);
+            rel.add(meta);
+
         }
 
-        ImageMeta rev = ImageDataService.getInstance().getMetaUsingPath(imgBase64);
-
-
-        return rev;
+        return rel;
 
     }
 

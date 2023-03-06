@@ -37,10 +37,15 @@ public class SqlConnection {
             String db_username = System.getenv("DB_USERNAME");
             String db_password = System.getenv("DB_PASSWORD");
 
-            newStr = newStr.replace("${drive}", db_drive)
-                    .replace("${url}", db_url)
-                    .replace("${username}", db_username)
-                    .replace("${password}", db_password);
+//            newStr = newStr.replace("${drive}", db_drive)
+//                    .replace("${url}", db_url)
+//                    .replace("${username}", db_username)
+//                    .replace("${password}", db_password);
+
+            newStr = newStr.replace("${drive}", "com.mysql.cj.jdbc.Driver")
+                    .replace("${url}", "jdbc:mysql://localhost:3306/TestDev?allowMultiQueries=true")
+                    .replace("${username}", "root")
+                    .replace("${password}", "Lrl@990213");
 
             input = new ByteArrayInputStream(newStr.getBytes());
         } catch (IOException e) {

@@ -36,7 +36,7 @@ create database if not exists TestDev;
             productId    int(6),
             filename     varchar(50),
             dateCreated  timestamp(3),
-            s3BucketPath varchar(50)
+            s3BucketPath varchar(100)
 
         );    </insert>
 
