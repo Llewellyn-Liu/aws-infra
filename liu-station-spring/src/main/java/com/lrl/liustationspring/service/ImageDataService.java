@@ -41,7 +41,24 @@ public class ImageDataService {
         return mapper.getMetaUsingPath(path);
     }
 
+    public ImageMeta getMetaUsingId(int id){
+        SqlSession session = SqlConnection.getSession();
+        ImageMapper mapper = session.getMapper(ImageMapper.class);
+
+        return mapper.getMetaUsingId(id);
+    }
+
+    public void deleteMetaUsingId(int imageId) {
+        SqlSession session = SqlConnection.getSession();
+        ImageMapper mapper = session.getMapper(ImageMapper.class);
+        mapper.deleteImageMeta(imageId);
+    }
+
     public static ImageDataService getInstance() {
         return instance;
     }
 }
+
+
+
+

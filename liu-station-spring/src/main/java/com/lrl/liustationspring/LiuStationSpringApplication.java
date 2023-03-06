@@ -5,7 +5,9 @@ import com.lrl.liustationspring.service.S3BucketService;
 import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.*;
+
+import javax.sql.DataSource;
 
 @SpringBootApplication
 public class LiuStationSpringApplication {
@@ -16,7 +18,6 @@ public class LiuStationSpringApplication {
         Bootstrapper.bootstrap();
 
         S3BucketService.readContext();
-        S3BucketService.transferFile();
     }
 
 }

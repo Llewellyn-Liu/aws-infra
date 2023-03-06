@@ -78,8 +78,8 @@ public class ProductImageController {
 
     }
 
-    @RequestMapping(value = "/data/product/{productId}/image/{imageId}")
-    public Image getImageUsingId(HttpServletRequest request, HttpServletResponse response, @PathVariable int productId, @PathVariable int imageId) {
+    @RequestMapping(value = "/data/product/{productId}/image/{imageId}", method = RequestMethod.GET)
+    public ImageMeta getMetaUsingId(HttpServletRequest request, HttpServletResponse response, @PathVariable int productId, @PathVariable int imageId) {
 
         if (!authentication(request)) {
             response.setStatus(401);
@@ -87,9 +87,46 @@ public class ProductImageController {
             return null;
         }
 
-        return null;
+        if(!validateProductId(productId, request)) {
+            response.setStatus(400);
+            logger.info("ProductId validation failed");
+            return null;
+        }
 
+        ImageMeta meta = ImageDataService.getInstance().getMetaUsingId(imageId);
+        if(meta == null){
+            response.setStatus(400);
+            return null;
+        }
 
+        return meta;
+    }
+
+    @RequestMapping(value = "/data/product/{productId}/image/{imageId}", method = RequestMethod.DELETE)
+    public void deleteImageUsingId(HttpServletRequest request, HttpServletResponse response, @PathVariable int productId, @PathVariable int imageId){
+        if (!authentication(request)) {
+            response.setStatus(401);
+            logger.info("Authentication Failed.");
+            return;
+        }
+
+        if(!validateProductId(productId, request)) {
+            response.setStatus(400);
+            logger.info("ProductId validation failed");
+            return;
+        }
+
+        //Delete file record
+        ImageMeta meta = ImageDataService.getInstance().getMetaUsingId(imageId);
+        ImageDataService.getInstance().deleteMetaUsingId(meta.getImageId());
+
+        //Delete file on disks
+        if(!deleteFile(new File(meta.getS3BucketPath()))){
+            response.setStatus(404);
+            logger.info("delete failed: file not exists locally or on s3");
+        }
+
+        response.setStatus(204);
     }
 
 
@@ -100,13 +137,13 @@ public class ProductImageController {
         String[] decodedToken = new String(Base64.getDecoder().decode(authValue[1])).split(":");
         User user = DataManipulationService.getInstance().getUserByUsername(decodedToken[0]);
         Product product = ProductDataService.getInstance().getProductInfo(pathProductId);
-        if (product == null) return false;
+        if (product == null || product.getOwnerUserId() != user.getId()) return false;
         if (product.getId() != pathProductId) return false;
 
         return true;
     }
 
-    public String saveImage(String base64Img, int productId, String filename, String suffix) {
+    private String saveImage(String base64Img, int productId, String filename, String suffix) {
         String dirPath = "img";
         File dir = new File(dirPath);
         if(!dir.exists()) dir.mkdir();
@@ -136,11 +173,36 @@ public class ProductImageController {
         return file.getAbsolutePath();
     }
 
-    public static void transferFile(File f){
+
+
+    /**
+     *
+     * @param f
+     */
+    private void transferFile(File f){
         final AmazonS3 s3 = AmazonS3ClientBuilder.defaultClient();
         String bucketName = "this-is-lrl-bucket-01";
 
         s3.putObject(bucketName, f.getName(), f);
+    }
+
+    private boolean deleteFile(File f){
+
+        //Delete from local
+        if(!f.exists()){
+            logger.info("File not exists.");
+            return false;
+        }
+        f.delete();
+        //Delete from
+        final AmazonS3 s3 = AmazonS3ClientBuilder.defaultClient();
+        String bucketName = "this-is-lrl-bucket-01";
+
+        if(!s3.doesObjectExist(bucketName, f.getName())){
+            return false;
+        }
+        s3.deleteObject(bucketName, f.getName());
+        return true;
     }
 
     private boolean authentication(HttpServletRequest request) {

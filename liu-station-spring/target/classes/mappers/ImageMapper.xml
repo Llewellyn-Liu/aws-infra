@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lrl.liustationspring.dao.mapper.ImageMapper">
+    <select id="getImagesUsingProductId" resultType="com.lrl.liustationspring.dao.pojo.Image">
+        select *
+        from Image
+        where productId = #{productId};
+    </select>
+
+    <insert id="addImage">
+        insert into Image
+        values (null,
+                #{productId},
+                #{filename},
+                #{dateCreated},
+                #{s3BucketPath});
+    </insert>
+
+
+    <select id="getMetaUsingPath" resultType="com.lrl.liustationspring.dao.pojo.ImageMeta">
+        select *
+        from Image
+        where s3BucketPath = #{path};
+    </select>
+
+    <select id="getMetaUsingId" resultType="com.lrl.liustationspring.dao.pojo.ImageMeta">
+        select *
+        from Image
+        where imageId = #{id};
+    </select>
+
+
+
+    <delete id="deleteImageMeta">
+        delete
+        from Image
+        where imageId = #{imageId};
+    </delete>
+
+</mapper>
