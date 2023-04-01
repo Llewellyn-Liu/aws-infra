@@ -8,6 +8,10 @@ public class TokenREST extends FieldREST{
     private boolean readOnly;
 
     private boolean writeOnly;
+
+    public TokenREST() {
+    }
+
     public TokenREST(String token, boolean readOnly, boolean writeOnly) {
         this.value = token;
         this.readOnly = readOnly;
@@ -28,6 +32,22 @@ public class TokenREST extends FieldREST{
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public boolean isReadOnly() {
+        return readOnly;
+    }
+
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly = readOnly;
+    }
+
+    public boolean isWriteOnly() {
+        return writeOnly;
+    }
+
+    public void setWriteOnly(boolean writeOnly) {
+        this.writeOnly = writeOnly;
     }
 
     @Override

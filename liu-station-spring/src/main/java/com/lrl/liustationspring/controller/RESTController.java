@@ -180,6 +180,13 @@ public class RESTController {
 //        return new DataManipulationService().getUserById(Integer.parseInt(id));
 //    }
 
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    public UserForResponse userTester(HttpServletRequest request){
+        User user = new User(1, "test", "testLN", "testFN", "testpswd", new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis()),"abc");
+        logger.info("Called Tester.");
+
+        return user.parseFormat();
+    }
 
     /**
      * Tool method - verifyHealth: Giving each user a fixed span to retrieve data.

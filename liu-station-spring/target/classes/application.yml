@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/TestDev
-    username: root
-    password: Lrl@990213
+    driver-class-name: ${DB_DRIVE}
+    url: ${DB_URL}?allowMultiQueries=true&createDatabaseIfNotExist=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}

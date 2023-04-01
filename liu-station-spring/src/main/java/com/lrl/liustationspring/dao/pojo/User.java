@@ -1,5 +1,7 @@
 package com.lrl.liustationspring.dao.pojo;
 
+import com.lrl.liustationspring.dao.pojo.userREST.UserREST;
+
 import java.sql.Date;
 import java.sql.Timestamp;
 
@@ -115,4 +117,5 @@ public class User {
     public UserForResponse parseFormat(){
         return new UserForResponse(id,firstname,lastname,username,accountCreated,accountLastModified,token);
     }
+
 }

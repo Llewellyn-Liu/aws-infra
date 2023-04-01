@@ -214,6 +214,8 @@ public class ProductDataController {
         String[] decodedToken = new String(Base64.getDecoder().decode(authValue[1])).split(":");
 
         User user = DataManipulationService.getInstance().getUserByUsername(decodedToken[0]);
+        if(user == null) return false;
+
         return BCrypt.checkpw(decodedToken[1], user.getPassword());
     }
 

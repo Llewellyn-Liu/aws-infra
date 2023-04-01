@@ -10,13 +10,13 @@
     </parent>
     <groupId>com.lrl</groupId>
     <artifactId>liu-station-spring</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>liu-station-spring</name>
     <description>liu-station-spring</description>
     <properties>
         <java.version>17</java.version>
     </properties>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -58,6 +58,11 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.12.420</version>
         </dependency>
 
     </dependencies>

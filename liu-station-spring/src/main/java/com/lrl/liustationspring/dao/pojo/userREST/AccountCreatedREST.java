@@ -11,6 +11,11 @@ public class AccountCreatedREST extends FieldREST{
 
     private boolean writeOnly;
 
+    public AccountCreatedREST(){
+
+    }
+
+
     public AccountCreatedREST(Timestamp value, boolean readOnly, boolean writeOnly) {
         this.value = value;
         this.readOnly = readOnly;

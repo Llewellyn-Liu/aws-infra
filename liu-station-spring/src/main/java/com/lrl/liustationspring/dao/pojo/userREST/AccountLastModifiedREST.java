@@ -11,6 +11,9 @@ public class AccountLastModifiedREST extends FieldREST{
 
     private boolean writeOnly;
 
+    public AccountLastModifiedREST() {
+    }
+
     public AccountLastModifiedREST(Timestamp value, boolean readOnly, boolean writeOnly) {
         this.value = value;
         this.readOnly = readOnly;

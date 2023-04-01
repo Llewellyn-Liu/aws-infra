@@ -10,6 +10,9 @@ public class LastNameREST extends FieldREST{
 
     private boolean writeOnly;
 
+    public LastNameREST() {
+    }
+
     public LastNameREST(String lastname, boolean readOnly, boolean writeOnly) {
         this.value = lastname;
         this.readOnly = readOnly;
@@ -30,6 +33,22 @@ public class LastNameREST extends FieldREST{
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public boolean isReadOnly() {
+        return readOnly;
+    }
+
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly = readOnly;
+    }
+
+    public boolean isWriteOnly() {
+        return writeOnly;
+    }
+
+    public void setWriteOnly(boolean writeOnly) {
+        this.writeOnly = writeOnly;
     }
 
     @Override
