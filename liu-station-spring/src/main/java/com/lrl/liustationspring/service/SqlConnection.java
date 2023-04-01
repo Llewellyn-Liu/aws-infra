@@ -42,10 +42,10 @@ public class SqlConnection {
 //                    .replace("${username}", db_username)
 //                    .replace("${password}", db_password);
 
-            newStr = newStr.replace("${drive}", "com.mysql.cj.jdbc.Driver")
-                    .replace("${url}", "jdbc:mysql://localhost:3306/TestDev?allowMultiQueries=true")
-                    .replace("${username}", "root")
-                    .replace("${password}", "Lrl@990213");
+            newStr = newStr.replace("${drive}", db_drive);
+            newStr = newStr.replace("${url}", db_url+"?allowMultiQueries=true&amp;createDatabaseIfNotExist=true");
+            newStr = newStr.replace("${username}", db_username);
+            newStr = newStr.replace("${password}", db_password);
 
             input = new ByteArrayInputStream(newStr.getBytes());
         } catch (IOException e) {
@@ -55,10 +55,7 @@ public class SqlConnection {
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
         SqlSessionFactory factory = sqlSessionFactoryBuilder.build(input);
 
-/**
- *
- */
-
+        //Auto commit = true
         SqlSession session = factory.openSession(true);
         return session;
     }

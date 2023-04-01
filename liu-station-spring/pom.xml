@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.lrl</groupId>
     <artifactId>liu-station-spring</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>liu-station-spring</name>
     <description>liu-station-spring</description>
     <properties>

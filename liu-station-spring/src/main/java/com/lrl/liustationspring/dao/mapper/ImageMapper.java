@@ -21,8 +21,4 @@ public interface ImageMapper {
     int updateProduct(Product product);
 
     int deleteProductData(int id);
-
-    ImageMeta getMetaUsingId(int id);
-
-    void deleteImageMeta(int imageId);
 }

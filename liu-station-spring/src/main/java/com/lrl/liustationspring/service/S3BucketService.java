@@ -10,7 +10,9 @@ import java.util.List;
 public class S3BucketService {
 
     public static void readContext(){
+        System.out.println("enter readContext()");
         final AmazonS3 s3 = AmazonS3ClientBuilder.defaultClient();
+        System.out.println("after build default client)");
         List<Bucket> list = s3.listBuckets();
         System.out.println("Bucket List: ");
         for(Bucket bk: list){
@@ -21,8 +23,6 @@ public class S3BucketService {
     public static void transferFile(){
         final AmazonS3 s3 = AmazonS3ClientBuilder.defaultClient();
         File f = new File("test.txt");
-        String bucketName = "this-is-lrl-bucket-01";
-
-        s3.putObject(bucketName, "what-ever-key", f);
+        String bucketName = System.getenv("s3_bucket_name");
     }
 }
