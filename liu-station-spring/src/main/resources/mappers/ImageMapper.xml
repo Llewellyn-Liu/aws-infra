@@ -25,10 +25,18 @@
         where s3BucketPath = #{path};
     </select>
 
-    <delete id="deleteProductData">
+    <select id="getMetaUsingId" resultType="com.lrl.liustationspring.dao.pojo.ImageMeta">
+        select *
+        from Image
+        where imageId = #{imageId};
+    </select>
+
+
+
+    <delete id="deleteImageMeta">
         delete
-        from Product
-        where id = #{id};
+        from Image
+        where imageId = #{imageId};
     </delete>
 
 </mapper>
