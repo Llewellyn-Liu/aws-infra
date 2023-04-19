@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="./nipplejs.js"></script>
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            $('#console').html("hello");
+        }
+    </script>
+
+</head>
+
+<body>
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+      </script>
+    <div id="app">{{message}}</div>
+    <div id="dynamic" style="width: 100ch; height: 50ch;background-color: bisque;"></div>
+    <script type="module">
+        import { createApp } from 'vue'
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        }).mount('#app')
+    </script>
+    <script type="module">
+        var dynamic = nipplejs.create({
+            zone: document.getElementById('dynamic'),
+            color: 'blue'
+        });
+
+        dynamic.on('move', function (evt, nipple) {
+            $('#console-x').text(JSON.stringify(nipple.position.x));
+            $('#console-y').text(JSON.stringify(nipple.position.y));
+            $('#console-radius').text(JSON.stringify(nipple.angle));
+            $('#direction').text(JSON.stringify(nipple.direction));
+            // console.log("data: ", nipple);
+
+            $.ajax({
+                type: "POST",
+                url: "/gadget/controller",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(nipple),
+                dataType: "json",
+                success: function (message) {
+                    console.log(message);
+                }
+            });
+
+        });
+
+    </script>
+    <div id="console-x"></div>
+    <div id="console-y"></div>
+    <div id="console-radius"></div>
+    <div id="direction"></div>
+</body>
+
+</html>

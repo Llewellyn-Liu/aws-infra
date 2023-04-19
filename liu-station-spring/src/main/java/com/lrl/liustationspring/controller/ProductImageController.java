@@ -15,10 +15,12 @@ import com.lrl.liustationspring.dao.pojo.User;
 import com.lrl.liustationspring.service.DataManipulationService;
 import com.lrl.liustationspring.service.ImageDataService;
 import com.lrl.liustationspring.service.ProductDataService;
+import com.timgroup.statsd.StatsDClient;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,10 +30,16 @@ import java.util.Date;
 
 @RestController
 public class ProductImageController {
-    Logger logger = LoggerFactory.getLogger(ProductImageController.class);
+    private Logger logger = LoggerFactory.getLogger(ProductImageController.class);
+
+    @Autowired
+    private StatsDClient statsDClient;
 
     @RequestMapping(value = "/data/product/{id}/image", method = RequestMethod.GET)
     public Image[] readImagesUsingProductId(HttpServletRequest request, HttpServletResponse response, @PathVariable int id) {
+
+        statsDClient.incrementCounter("ProductImageController.data.product.id.image.GET");
+
         if (!authentication(request)) {
             response.setStatus(401);
             logger.info("Authentication Failed.");
@@ -43,6 +51,8 @@ public class ProductImageController {
     }
     @RequestMapping(value = "/data/product/{pathProductId}/image", method = RequestMethod.POST)
     public String methodDispatcher(HttpServletRequest request, HttpServletResponse response, @PathVariable int pathProductId, @RequestBody String input){
+
+        statsDClient.incrementCounter("ProductImageController.data.product.productId.image.POST");
 
         ObjectMapper mapper = new ObjectMapper();
         boolean isSingle = true;
@@ -96,6 +106,8 @@ public class ProductImageController {
 
     public ImageMeta createNewImageForProduct(HttpServletRequest request, HttpServletResponse response, @PathVariable int pathProductId, @RequestBody Image img) {
 
+        statsDClient.incrementCounter("ProductImageController.data.product.productId.image.single.POST");
+
         logger.debug("Enter single image method.");
 
         if (!authentication(request)) {
@@ -135,6 +147,8 @@ public class ProductImageController {
 
 
     public ImageMeta[] createImagesForProduct(HttpServletRequest request, HttpServletResponse response, @PathVariable int pathProductId, @RequestBody Image[] imgs){
+
+        statsDClient.incrementCounter("ProductImageController.data.product.productId.image.multiple.POST");
 
         logger.debug("Enter multiple image method.");
         if (!authentication(request)) {
@@ -178,6 +192,9 @@ public class ProductImageController {
     @RequestMapping(value = "/data/product/{pathProductId}/image/{imageId}", method = RequestMethod.DELETE)
     public String deleteImageFromProduct(HttpServletRequest request, HttpServletResponse response,
                                          @PathVariable int pathProductId, @PathVariable int imageId) {
+
+        statsDClient.incrementCounter("ProductImageController.data.product.pathProductId.imageDELETE");
+
         if (!authentication(request)) {
             response.setStatus(401);
             return null;

@@ -4,10 +4,12 @@ import com.lrl.liustationspring.dao.pojo.Product;
 import com.lrl.liustationspring.dao.pojo.User;
 import com.lrl.liustationspring.service.DataManipulationService;
 import com.lrl.liustationspring.service.ProductDataService;
+import com.timgroup.statsd.StatsDClient;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +21,9 @@ import java.util.Date;
 public class ProductDataController {
 
     Logger logger = LoggerFactory.getLogger(ProductDataController.class);
+
+    @Autowired
+    private StatsDClient statsDClient;
 
     @RequestMapping(value = "/data/product/{productId}", method = RequestMethod.GET)
     private Product getProductDataById(@PathVariable int productId){
@@ -33,6 +38,9 @@ public class ProductDataController {
                                          @RequestParam(value = "quantity")int quantity,
                                          HttpServletRequest request,
                                          HttpServletResponse response){
+
+        statsDClient.incrementCounter("ProductDataController.data.product.POST");
+
         if(quantity < 0)
             response.setStatus(400);
 
@@ -69,6 +77,8 @@ public class ProductDataController {
                                           @RequestParam(value = "quantity")int quantity,
                                           HttpServletRequest request,
                                           HttpServletResponse response){
+
+        statsDClient.incrementCounter("ProductDataController.data.product.id.PUT");
 
         if(ProductDataService.getInstance().getProductInfo(id) == null){
             response.setStatus(204);
@@ -118,6 +128,8 @@ public class ProductDataController {
                                           @RequestParam(value = "quantity")int quantity,
                                           HttpServletRequest request,
                                           HttpServletResponse response){
+        statsDClient.incrementCounter("ProductDataController.data.product.PATCH");
+
         if(quantity < 0) {
             logger.info("Quantity lower than 0");
             response.setStatus(400);
@@ -154,6 +166,8 @@ public class ProductDataController {
     private String deleteProductData(@PathVariable int id,
                                                    HttpServletRequest request,
                                                    HttpServletResponse response){
+
+        statsDClient.incrementCounter("ProductDataController.data.product.id.DELETE");
 
         if(request.getHeader("Authorization") == null) {
             response.setStatus(401);

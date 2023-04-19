@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.lrl</groupId>
     <artifactId>liu-station-spring</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.8-SNAPSHOT</version>
     <name>liu-station-spring</name>
     <description>liu-station-spring</description>
     <properties>
@@ -63,6 +63,11 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
             <version>1.12.420</version>
+        </dependency>
+        <dependency>
+            <groupId>com.timgroup</groupId>
+            <artifactId>java-statsd-client</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
     </dependencies>
