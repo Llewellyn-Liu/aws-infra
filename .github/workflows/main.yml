@@ -43,17 +43,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
         
     - name: Setup MySQL
-  # You may pin to the exact commit or the version.
-  # uses: mirromutth/mysql-action@de1fba8b3f90ce8db80f663a7043be3cf3231248
-      uses: mirromutth/mysql-action@v1.1
-      with:
-    # The port of host
-        host port: 3306
-    # Version of MySQL to use
-        mysql version: 5.7
-        mysql root password: ${{ secrets.DB_PASSWORD }}
-    # MYSQL_DATABASE - name for the default database that is created
-        mysql database: TestDev
+      run: sudo yum install -y mariadb-server
+      
+    - name: Start Mysql 
+      run: sudo systemctl start mariadb
         
     - name: Build with Maven
       run: mvn -B package --file liu-station-spring/pom.xml
