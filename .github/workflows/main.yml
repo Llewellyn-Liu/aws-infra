@@ -54,10 +54,6 @@ jobs:
         mysql root password: ${{ secrets.DB_PASSWORD }}
     # MYSQL_DATABASE - name for the default database that is created
         mysql database: TestDev
-    # MYSQL_USER - create the specified user with superuser power for created database
-        mysql user: ${{ secrets.DB_USERNAME }}
-    # MYSQL_PASSWORD - specified superuser password which user is power for created database
-        mysql password: ${{ secrets.DB_PASSWORD }}
         
     - name: Build with Maven
       run: mvn -B package --file liu-station-spring/pom.xml
