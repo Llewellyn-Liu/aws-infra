@@ -60,7 +60,7 @@ jobs:
         mysql password: ${{ secrets.DB_PASSWORD }}
         
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file liu-station-spring/pom.xml
     
     - name: Get Name
       run: whoami
