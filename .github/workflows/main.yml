@@ -32,7 +32,19 @@ jobs:
     
     - name: Get Name
       run: whoami
+      
+    - name: Print Current Path
+      run: pwd
+      
+    - name: make new Dir
+      run: mkdir newdir
+      
+    - name: Enter new Dir
+      run: cd newdir
 
+    - name: Print Current Path
+      run: pwd
+      
     - name: Packer Init
       run: packer init hashicorp/09
       
