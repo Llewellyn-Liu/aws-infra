@@ -51,6 +51,7 @@ jobs:
         host port: 3306
     # Version of MySQL to use
         mysql version: 5.7
+        mysql root password: ${{ secrets.DB_PASSWORD }}
     # MYSQL_DATABASE - name for the default database that is created
         mysql database: TestDev
     # MYSQL_USER - create the specified user with superuser power for created database
