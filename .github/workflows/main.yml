@@ -18,6 +18,10 @@ env:
   PKR_VAR_subnet-id: subnet-04b58ab02e84d3226
   PKR_VAR_sg-id: sg-052d9ec70a4403055
   
+  DB_USERNAME: ${{ secrets.DB_USERNAME }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+  DB_DRIVE: ${{ secrets.DB_DRIVE }}
+  DB_URL: ${{ secrets.DB_URL }}
 
 jobs:
   build:
@@ -29,6 +33,33 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+        
+    - name: Setup MySQL
+  # You may pin to the exact commit or the version.
+  # uses: mirromutth/mysql-action@de1fba8b3f90ce8db80f663a7043be3cf3231248
+      uses: mirromutth/mysql-action@v1.1
+      with:
+    # The port of host
+        host port: 3306
+    # Version of MySQL to use
+        mysql version: 5.7
+    # MYSQL_DATABASE - name for the default database that is created
+        mysql database: TestDev
+    # MYSQL_USER - create the specified user with superuser power for created database
+        mysql user: ${{ secrets.DB_USERNAME }}
+    # MYSQL_PASSWORD - specified superuser password which user is power for created database
+        mysql password: ${{ secrets.DB_PASSWORD }}
+        
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
     
     - name: Get Name
       run: whoami
