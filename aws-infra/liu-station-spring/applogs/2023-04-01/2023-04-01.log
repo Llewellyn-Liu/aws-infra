@@ -1,0 +1,574 @@
+2023-04-01 17:04:22 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 28812 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 17:04:22 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 17:04:23 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 17:04:23 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-01 17:04:23 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-01 17:04:23 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:23 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-01 17:04:23 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01 17:04:23 - [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-01 17:04:23 - [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 753 ms
+2023-04-01 17:04:23 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 17:04:23 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e7740a5
+2023-04-01 17:04:23 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 17:04:23 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 17:04:23 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 17:04:24 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 17:04:24 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 17:04:24 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 17:04:24 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:04:24 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 17:04:24 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:24 - [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-04-01 17:04:24 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:04:24 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 17:04:24 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 17:04:24 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:24 - [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-04-01 17:04:24 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:24 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:24 - [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-01 17:04:24 - [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-04-01 17:04:40 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 9096 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 17:04:40 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 17:04:40 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 17:04:40 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-04-01 17:04:41 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-01 17:04:41 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:41 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-01 17:04:41 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01 17:04:41 - [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-01 17:04:41 - [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 772 ms
+2023-04-01 17:04:41 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 17:04:41 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e7740a5
+2023-04-01 17:04:41 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 17:04:41 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 17:04:41 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 17:04:41 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 17:04:41 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 17:04:42 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 17:04:42 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:04:42 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 17:04:42 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-01 17:04:42 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-01 17:04:42 - [main] INFO  c.l.l.LiuStationSpringApplication - Started LiuStationSpringApplication in 2.148 seconds (process running for 2.608)
+2023-04-01 17:04:42 - [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 17:04:42 - [main] WARN  com.amazonaws.util.EC2MetadataUtils - Unable to retrieve the requested metadata (/latest/dynamic/instance-identity/document). Failed to connect to service endpoint: 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 17:06:46 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:06:46 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 17:06:46 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 17:07:09 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Starting LiuStationSpringApplicationTests using Java 17.0.6 with PID 24716 (started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 17:07:09 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 17:07:09 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 17:07:09 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-04-01 17:07:10 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 17:07:10 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a0aaaf0
+2023-04-01 17:07:10 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 17:07:10 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 17:07:10 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 17:07:10 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 17:07:10 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 17:07:11 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 17:07:11 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:07:11 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 17:07:11 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Started LiuStationSpringApplicationTests in 2.795 seconds (process running for 3.536)
+2023-04-01 17:07:12 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 17:07:12 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 17:07:12 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 19:49:50 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 30880 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 19:49:50 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 19:49:50 - [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'metricsClient' defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=metricsClient; factoryMethodName=metricsClient; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class]] for bean 'metricsClient' since there is already [Generic bean: class [com.lrl.liustationspring.controller.tools.MetricsClient]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes\com\lrl\liustationspring\controller\tools\MetricsClient.class]] bound.
+2023-04-01 19:49:50 - [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-01 19:49:50 - [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'metricsClient', defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class], could not be registered. A bean with that name has already been defined in file [D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes\com\lrl\liustationspring\controller\tools\MetricsClient.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-04-01 19:52:38 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 20988 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 19:52:38 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 19:52:38 - [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'metricsClient' defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=metricsClient; factoryMethodName=metricsClient; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class]] for bean 'metricsClient' since there is already [Generic bean: class [com.lrl.liustationspring.controller.tools.MetricsClient]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in file [D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes\com\lrl\liustationspring\controller\tools\MetricsClient.class]] bound.
+2023-04-01 19:52:38 - [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-04-01 19:52:38 - [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'metricsClient', defined in class path resource [com/lrl/liustationspring/controller/tools/MetricsClient.class], could not be registered. A bean with that name has already been defined in file [D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes\com\lrl\liustationspring\controller\tools\MetricsClient.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-04-01 19:53:08 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 21484 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 19:53:08 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 19:53:09 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 19:53:09 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2023-04-01 19:53:09 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-01 19:53:09 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-01 19:53:09 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-01 19:53:09 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01 19:53:09 - [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-01 19:53:09 - [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 851 ms
+2023-04-01 19:53:09 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 19:53:09 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@508ad266
+2023-04-01 19:53:09 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 19:53:09 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 19:53:09 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 19:53:10 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 19:53:10 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 19:53:10 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 19:53:10 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 19:53:10 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 19:53:10 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-01 19:53:10 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-01 19:53:10 - [main] INFO  c.l.l.LiuStationSpringApplication - Started LiuStationSpringApplication in 2.348 seconds (process running for 2.79)
+2023-04-01 19:53:11 - [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 19:53:11 - [main] WARN  com.amazonaws.util.EC2MetadataUtils - Unable to retrieve the requested metadata (/latest/dynamic/instance-identity/document). Failed to connect to service endpoint: 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 19:54:01 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 19:54:01 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 19:54:01 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 19:54:04 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 28012 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 19:54:04 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 19:54:05 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 19:54:05 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-01 19:54:05 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-01 19:54:05 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-01 19:54:05 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-01 19:54:05 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01 19:54:05 - [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-01 19:54:05 - [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 757 ms
+2023-04-01 19:54:05 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 19:54:05 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@216372b7
+2023-04-01 19:54:05 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 19:54:06 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 19:54:06 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 19:54:06 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 19:54:06 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 19:54:06 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 19:54:06 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 19:54:06 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 19:54:06 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-01 19:54:06 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-01 19:54:06 - [main] INFO  c.l.l.LiuStationSpringApplication - Started LiuStationSpringApplication in 2.131 seconds (process running for 2.58)
+2023-04-01 19:54:07 - [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 19:54:07 - [main] WARN  com.amazonaws.util.EC2MetadataUtils - Unable to retrieve the requested metadata (/latest/dynamic/instance-identity/document). Failed to connect to service endpoint: 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 20:03:01 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:03:01 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 20:03:01 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 20:03:06 - [main] INFO  c.l.l.LiuStationSpringApplication - Starting LiuStationSpringApplication using Java 17.0.6 with PID 27500 (D:\Lrl_0213\Project\LiuStation\liu-station-spring\target\classes started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 20:03:06 - [main] INFO  c.l.l.LiuStationSpringApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 20:03:06 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 20:03:06 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-04-01 20:03:06 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-01 20:03:06 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-01 20:03:06 - [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-01 20:03:06 - [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-04-01 20:03:07 - [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-01 20:03:07 - [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 765 ms
+2023-04-01 20:03:07 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 20:03:07 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@508ad266
+2023-04-01 20:03:07 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 20:03:07 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 20:03:07 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 20:03:07 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 20:03:07 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 20:03:07 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 20:03:07 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:03:07 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 20:03:07 - [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-01 20:03:07 - [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-01 20:03:07 - [main] INFO  c.l.l.LiuStationSpringApplication - Started LiuStationSpringApplication in 2.115 seconds (process running for 2.565)
+2023-04-01 20:03:08 - [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 20:03:08 - [main] WARN  com.amazonaws.util.EC2MetadataUtils - Unable to retrieve the requested metadata (/latest/dynamic/instance-identity/document). Failed to connect to service endpoint: 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.util.EC2MetadataUtils.getItems(EC2MetadataUtils.java:407)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:376)
+	at com.amazonaws.util.EC2MetadataUtils.getData(EC2MetadataUtils.java:372)
+	at com.amazonaws.util.EC2MetadataUtils.getEC2InstanceRegion(EC2MetadataUtils.java:287)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.tryDetectRegion(InstanceMetadataRegionProvider.java:59)
+	at com.amazonaws.regions.InstanceMetadataRegionProvider.getRegion(InstanceMetadataRegionProvider.java:50)
+	at com.amazonaws.regions.AwsRegionProviderChain.getRegion(AwsRegionProviderChain.java:46)
+	at com.amazonaws.client.builder.AwsClientBuilder.determineRegionFromRegionProvider(AwsClientBuilder.java:475)
+	at com.amazonaws.client.builder.AwsClientBuilder.setRegion(AwsClientBuilder.java:458)
+	at com.amazonaws.client.builder.AwsClientBuilder.configureMutableProperties(AwsClientBuilder.java:424)
+	at com.amazonaws.client.builder.AwsSyncClientBuilder.build(AwsSyncClientBuilder.java:46)
+	at com.amazonaws.services.s3.AmazonS3ClientBuilder.defaultClient(AmazonS3ClientBuilder.java:54)
+	at com.lrl.liustationspring.service.S3BucketService.readContext(S3BucketService.java:14)
+	at com.lrl.liustationspring.LiuStationSpringApplication.main(LiuStationSpringApplication.java:18)
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:532)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:637)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:280)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:385)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:407)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1287)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 17 common frames omitted
+2023-04-01 20:03:30 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Starting LiuStationSpringApplicationTests using Java 17.0.6 with PID 31596 (started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 20:03:30 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 20:03:30 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 20:03:30 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-04-01 20:03:30 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 20:03:31 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58a765ce
+2023-04-01 20:03:31 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 20:03:31 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 20:03:31 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 20:03:31 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 20:03:31 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 20:03:31 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 20:03:31 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:03:32 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 20:03:32 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Started LiuStationSpringApplicationTests in 2.868 seconds (process running for 3.764)
+2023-04-01 20:03:32 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:03:32 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 20:03:32 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 20:13:55 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Starting LiuStationSpringApplicationTests using Java 17.0.6 with PID 17976 (started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 20:13:55 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 20:13:55 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 20:13:55 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2023-04-01 20:13:56 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 20:13:56 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5600a5da
+2023-04-01 20:13:56 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 20:13:56 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 20:13:56 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 20:13:56 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 20:13:56 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 20:13:57 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 20:13:57 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:13:57 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 20:13:57 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Started LiuStationSpringApplicationTests in 2.821 seconds (process running for 3.577)
+2023-04-01 20:13:58 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:13:58 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 20:13:58 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 20:20:59 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:20:59 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 20:20:59 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-04-01 20:28:43 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Starting LiuStationSpringApplicationTests using Java 17.0.6 with PID 30184 (started by liuru in D:\Lrl_0213\Project\LiuStation\liu-station-spring)
+2023-04-01 20:28:43 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-04-01 20:28:43 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-01 20:28:43 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2023-04-01 20:28:44 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-01 20:28:44 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5600a5da
+2023-04-01 20:28:44 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-01 20:28:44 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-01 20:28:44 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-01 20:28:45 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-01 20:28:45 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-01 20:28:45 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-01 20:28:45 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:28:45 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-01 20:28:46 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Started LiuStationSpringApplicationTests in 3.765 seconds (process running for 4.74)
+2023-04-01 20:28:46 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-01 20:28:46 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-01 20:28:46 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
