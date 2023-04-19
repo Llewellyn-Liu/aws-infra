@@ -1,0 +1,15 @@
+name: My test workflow
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  echo-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: echo the message
+        run: echo "Hello world!"
