@@ -13,7 +13,7 @@ env:
   PKR_VAR_auth-key: ${{ secrets.AUTH_KEY }}
   PKR_VAR_auth-secret-key: ${{ secrets.AUTH_SECRET_KEY }}
   PKR_VAR_default-region: ${{ secrets.REGION }}
-  PKR_VAR_default-ami: ${{ secrets.AMI }}
+  PKR_VAR_default-ami: ami-0f1a5f5ada0e7da53
   PKR_VAR_vpc-id: vpc-015b941b9484f46bd
   PKR_VAR_subnet-id: subnet-04b58ab02e84d3226
   PKR_VAR_sg-id: sg-052d9ec70a4403055
