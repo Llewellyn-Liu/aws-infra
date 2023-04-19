@@ -6,10 +6,12 @@ import com.lrl.liustationspring.dao.pojo.User;
 import com.lrl.liustationspring.dao.pojo.UserForResponse;
 import com.lrl.liustationspring.service.DataManipulationService;
 import com.lrl.liustationspring.service.RegisterService;
+import com.timgroup.statsd.StatsDClient;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,10 +28,15 @@ public class RESTController {
      */
     private static HashMap<String, Long> authorizedUserMenu = new HashMap<>();
 
-    Logger logger = LoggerFactory.getLogger(RESTController.class);
+    private Logger logger = LoggerFactory.getLogger(RESTController.class);
+
+    @Autowired
+    private StatsDClient statsDClient;
 
     @RequestMapping(value = "/data", method = RequestMethod.GET)
     public void securityCheck(HttpServletRequest request, HttpServletResponse response) {
+
+        statsDClient.incrementCounter("RESTController.data.GET");
 
         String attr = request.getHeader("Authorization");
         if (null == attr) {
@@ -65,6 +72,9 @@ public class RESTController {
 
     @RequestMapping(value = "/data/user/{id}", method = RequestMethod.GET)
     private UserForResponse userGetter(@PathVariable int id, HttpServletRequest request, HttpServletResponse response) {
+
+        statsDClient.incrementCounter("RESTController.data.user.id.GET");
+
         User user = DataManipulationService.getInstance().getUserById(id);
         if (user == null) {
             logger.info("No id found in database.");
@@ -92,6 +102,7 @@ public class RESTController {
                                        @RequestParam(value = "password", defaultValue = "NotAPassword") String password,
                                        HttpServletResponse response) {
 
+        statsDClient.incrementCounter("RESTController.data.user.POST");
 
         logger.info("Register application received: username = " + username + ", firstname = " + firstname
                 + ", lastname = " + lastname + ",token = " + password);
@@ -125,10 +136,11 @@ public class RESTController {
     public UserForResponse userUpdater(@PathVariable int id, @RequestParam(value = "firstname") String firstname, @RequestParam(value = "lastname") String lastname,
                                        @RequestParam(value = "password") String password, @RequestParam(value = "username") String username, HttpServletRequest request, HttpServletResponse response) {
 
+        statsDClient.incrementCounter("RESTController.data.user.id.PUT");
 
         User user = DataManipulationService.getInstance().getUserById(id);
 
-        //If cannot find user, return 400 status
+        //If user cannot be found , return 400 status
         if (null == user) {
             response.setStatus(400);
             logger.info("Cannot find user in database.");
@@ -182,6 +194,7 @@ public class RESTController {
 
     @RequestMapping(value = "/test", method = RequestMethod.POST)
     public UserForResponse userTester(HttpServletRequest request){
+        statsDClient.incrementCounter("RESTController.test.POST");
         User user = new User(1, "test", "testLN", "testFN", "testpswd", new Timestamp(System.currentTimeMillis()), new Timestamp(System.currentTimeMillis()),"abc");
         logger.info("Called Tester.");
 

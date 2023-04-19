@@ -4,3 +4,11 @@ spring:
     url: ${DB_URL}?allowMultiQueries=true&createDatabaseIfNotExist=true
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+
+
+server:
+  port: 8443
+  ssl:
+    certificate: src/main/resources/static/ssl/c.crt
+    certificate-private-key: src/main/resources/static/ssl/pri.key
+    trust-certificate: src/main/resources/static/ssl/Cloudflare_CA.crt

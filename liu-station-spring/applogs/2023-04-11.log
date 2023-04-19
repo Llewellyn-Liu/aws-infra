@@ -1,0 +1,18 @@
+2023-04-11 15:31:57 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Starting LiuStationSpringApplicationTests using Java 17.0.6 with PID 3040 (started by liuru in D:\Lrl_0213\Project\AWSDemo\test\08\aws-infra\liu-station-spring)
+2023-04-11 15:31:57 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-04-11 15:31:57 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-11 15:31:57 - [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2023-04-11 15:31:57 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-04-11 15:31:58 - [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b14c61
+2023-04-11 15:31:58 - [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-04-11 15:31:58 - [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-11 15:31:58 - [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-04-11 15:31:58 - [main] WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-04-11 15:31:58 - [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-11 15:31:59 - [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-11 15:31:59 - [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 15:31:59 - [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-11 15:31:59 - [main] INFO  c.l.l.LiuStationSpringApplicationTests - Started LiuStationSpringApplicationTests in 2.937 seconds (process running for 3.752)
+2023-04-11 15:31:59 - [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-11 15:31:59 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-04-11 15:31:59 - [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
